@@ -6,7 +6,6 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
 <?php
 $paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, quisquam nostrum. Consequuntur dicta, sint qui dolore quisquam, perspiciatis eaque illo incidunt aliquam harum facere ducimus dolorem aliquid ad officia quae.";
-$parLen = strlen($paragraph);
 $censura = $_GET["censura"];
 $paragraph2 = str_replace($censura, "***", $paragraph);
 ?>
@@ -24,5 +23,6 @@ $paragraph2 = str_replace($censura, "***", $paragraph);
     <p>Lunghezza stringa: <?php echo strlen($paragraph); ?></p>
     <p>Aggiungi all'URL la seguente stringa ?censura="parola" dove la parola è quello che vuoi censurare.</p>
     <p>Frase censurata: "<?php echo $paragraph2; ?>"</p>
+    <p>Lunghezza stringa: <?php echo strlen($paragraph2); ?></p>
 </body>
 </html>
